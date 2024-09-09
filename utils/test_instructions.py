@@ -1,12 +1,10 @@
 from langchain import PromptTemplate, LLMChain
 from langchain.chat_models import ChatOpenAI
 import streamlit as st
-import openai
-
 
 # Function to generate test instructions
 def generate_test_instructions(description, context_text):
-    # Define multiple examples for multi-shot prompt
+    # Defining multiple examples for multi-shot prompt
     examples = [
         {
             "description": "A login screen with fields for username and password, and a submit button.",
@@ -90,7 +88,7 @@ def generate_test_instructions(description, context_text):
         "context_text": context_text or "There is no additional context provided."
     }
 
-    # Set up the LLM chain
+    # Setting up the LLM chain
     llm_chain = LLMChain(prompt=prompt, llm=ChatOpenAI(model="gpt-4", openai_api_key=st.secrets["OPEN_AI_API_KEY"]))
 
     # Generate the test instructions
@@ -105,11 +103,10 @@ from openai import OpenAI
 
 # Initialize the OpenAI client
 client = OpenAI(
-    api_key=st.secrets["OPEN_AI_API_KEY"]  # Fetch API key from environment variable
+    api_key=st.secrets["OPEN_AI_API_KEY"]  
 )
 
 def get_llm_answer(question: str, supporting_text: str) -> str:
-    # Combine the supporting text (test instructions) and the question (context text)
     prompt = f"Supporting Information: {supporting_text}\n\nQuestion: {question}\nAnswer:"
 
     try:
@@ -123,7 +120,7 @@ def get_llm_answer(question: str, supporting_text: str) -> str:
        ],
            temperature=0
 )
-       response_dict = response.model_dump()    # <--- convert to dictionary
+       response_dict = response.model_dump()   
        answer = response_dict["choices"][0]["message"]["content"]  
        return answer
 
