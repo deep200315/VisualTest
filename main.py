@@ -2,13 +2,10 @@ import streamlit as st
 from components import load_base64_image, encode_image, get_image_description
 from utils import generate_test_instructions, get_llm_answer
 
-# Load the OpenAI API key from Streamlit secrets
 api_key = st.secrets["OPEN_AI_API_KEY"]
 
-# Load the base64-encoded icon image
-icon_base64 = load_base64_image("assets/icon1.png")  # Path to your icon image in assets
+icon_base64 = load_base64_image("assets/icon1.png")  
 
-# Streamlit app layout with base64-encoded image in the markdown
 st.markdown(
     f"""
     <h1 style='display: flex; align-items: center;'>
@@ -33,7 +30,7 @@ if 'test_instructions' not in st.session_state:
 # Process uploaded images if any
 if uploaded_images:
     # Create a container for each image and its testing instructions
-    col1, col2 = st.columns([1, 1])  # Divide the page into two columns
+    col1, col2 = st.columns([1, 1]) 
     with col1:
         for i, image in enumerate(uploaded_images):
             # Display the image
@@ -58,17 +55,14 @@ if uploaded_images:
             st.write(f"**Image {i+1} Test Instructions:**")
             st.write(st.session_state.test_instructions[f"Image {i+1}"])
 
-    # Input field for additional context or queries
 
     if context_text:
-        # Combine test instructions with the context (question)
         combined_test_instructions = ""
         for i in range(len(uploaded_images)):
             if f"Image {i+1}" in st.session_state.test_instructions:
                 combined_test_instructions += f"\nImage {i+1} Test Instructions: {st.session_state.test_instructions[f'Image {i+1}']}"
 
-        # Generate and display the response using the context and the combined test instructions
-        # Generate and display the response using the context and the combined test instructions
-            response = get_llm_answer(context_text, combined_test_instructions)  # Passing both query and supporting text
+        
+            response = get_llm_answer(context_text, combined_test_instructions)  
             st.write("**Response to your query:**")
             st.write(response)
