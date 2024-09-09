@@ -58,5 +58,7 @@ As we are using streamlit:
 streamlit run main.py
 ```
 ## Screenshots
+Dashboard of the LLM Application
+![Screenshot 2024-09-09 140557.png](https://github.com/deep200315/VisualTest/blob/main/test_photos/Screenshot%202024-09-09%20140557.png)
 
     
