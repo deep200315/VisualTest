@@ -43,7 +43,7 @@ if uploaded_images:
 
     with col2:
         # Display a button to generate test instructions for all images
-        if st.button("Generate Test Instructions."):
+        if st.button("Describe Testing Instructions."):
             # Generate and store the test instructions in session state
             for i, description in enumerate(descriptions):
                 test_instructions = generate_test_instructions(description, api_key)
