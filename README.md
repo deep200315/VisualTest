@@ -64,7 +64,7 @@ Dashboard of the LLM Application:
 
 After uploaded image is processed the "Describe test instructions" button appears:
 
-![Screenshot 2024-09-09 144557.png](https://github.com/deep200315/VisualTest/blob/main/test_photos/Screenshot%202024-09-09%20144557.png)
+![Screenshot 2024-09-09 151353.png](https://github.com/deep200315/VisualTest/blob/main/test_photos/Screenshot%202024-09-09%20151353.png)
 
 After pressing the button test instructions will be generated:
 
