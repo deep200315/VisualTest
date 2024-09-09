@@ -57,4 +57,6 @@ As we are using streamlit:
 ```bash
 streamlit run main.py
 ```
+## Screenshots
+
     
