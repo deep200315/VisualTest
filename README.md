@@ -74,4 +74,22 @@ Additional Context or queries can be typed in the text box and result is generat
 
 ![Screenshot 2024-09-09 144706.png](https://github.com/deep200315/VisualTest/blob/main/test_photos/Screenshot%202024-09-09%20144706.png)
 
-    
+
+## Prompting Strategy
+
+ - Prompt Template with Examples:
+ Purpose: To provide a format for generating functional test instructions.
+How It’s Used: Two example descriptions and their corresponding test instructions are provided to the language model as references. This helps the model understand the desired format and level of detail. It is called "MULTI-SHOT PROMPTING"
+
+- Dynamic Input:
+Purpose: To generate custom test instructions based on new input.
+How It’s Used: The model is given a new image description and optional context text (e.g., additional questions or details). This input is combined with the examples to create a prompt for generating specific test instructions.
+
+- Language Model Integration:
+Purpose: To use a language model (e.g., GPT-4) to generate responses based on the prompt.
+How It’s Used: LLMChain is employed to run the prompt through the model, which produces the test instructions based on the structured format provided.
+
+- Handling Context and Queries:
+Purpose: To answer additional questions or provide further context.
+How It’s Used: Any extra context or questions are combined with the test instructions and used to generate responses through another API call.
+This approach leverages example-based prompting and dynamic input to generate detailed, structured test instructions and handle additional queries effectively.
