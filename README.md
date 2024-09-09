@@ -20,33 +20,33 @@ VisualTestAI is a tool designed to automate the generation of testing instructio
 Open your terminal or command line and run the following command:
  
 
-```bash
+```ruby
  git clone https://github.com/deep200315/VisualTest.git
 ```
 
 2.Navigate to the Project Directory:
- ```bash
+ ```ruby
 cd VisualTest
 ```
 
 3.Set Up a Virtual Environment (Optional but Recommended):
  
   Create a virtual environment to manage dependencies:
-  ```bash
+  ```ruby
   python -m venv venv
 ```
 Activate the virtual environment:
-```bash
+```ruby
 venv\Scripts\activate
 ```
 4.Install Dependencies:
-```bash
+```ruby
 pip install -r requirements.txt
 ```
 5.Set up Environment Variables:
 Here we are using streamlit for frontend so:
 Create a
- ```bash
+ ```ruby
 .streamlit/secrets.toml
 ``` 
 file in the project root directory.
