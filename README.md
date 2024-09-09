@@ -58,7 +58,20 @@ As we are using streamlit:
 streamlit run main.py
 ```
 ## Screenshots
-Dashboard of the LLM Application
+Dashboard of the LLM Application:
+
 ![Screenshot 2024-09-09 140557.png](https://github.com/deep200315/VisualTest/blob/main/test_photos/Screenshot%202024-09-09%20140557.png)
+
+After uploaded image is processed the "Describe test instructions" button appears:
+
+![Screenshot 2024-09-09 144557.png](https://github.com/deep200315/VisualTest/blob/main/test_photos/Screenshot%202024-09-09%20144557.png)
+
+After pressing the button test instructions will be generated:
+
+![Screenshot 2024-09-09 144624.png](https://github.com/deep200315/VisualTest/blob/main/test_photos/Screenshot%202024-09-09%20144624.png)
+
+Additional Context or queries can be typed in the text box and result is generated:
+
+![Screenshot 2024-09-09 144706.png](https://github.com/deep200315/VisualTest/blob/main/test_photos/Screenshot%202024-09-09%20144706.png)
 
     
